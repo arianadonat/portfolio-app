@@ -1,0 +1,29 @@
+---
+const PROJECTS = [
+    {
+       title: 'Projects 1',
+       description:'#',
+       github:'https://github.com/arianadonat/weather',
+       image:'/Projects/weather.png',
+       tags: ['HTML','CSS','Javascript']
+    }
+]
+---
+
+{
+    PROJECTS.map(({image, title, description, tags }) => (
+        <li class="mb-10 ms-4">
+        <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul>
+             { tags.map(tag  => (
+                <li>{tag}</li>
+              ) )}
+             </ul>
+             <img src={image} alt={'Captura de pantalla del proyecto ${image}'}/>
+            </li>
+             </article>
+    ))
+}
+
